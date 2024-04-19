@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="modal" prefHeight="417.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="di.calculadorafx.HelloController">
+   <children>
+      <Label fx:id="labelValor" layoutX="14.0" layoutY="26.0" text="Introduzca el valor de moneda de cambio: ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="editText" layoutX="22.0" layoutY="57.0" />
+      <Label layoutX="22.0" layoutY="119.0" prefHeight="52.0" prefWidth="335.0" text="Indique las opciones de conversion que desea visualizar:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkMoneda" layoutX="40.0" layoutY="179.0" mnemonicParsing="false" text="Moneda" />
+      <CheckBox fx:id="checklongitud" layoutX="40.0" layoutY="209.0" mnemonicParsing="false" text="Longitud" />
+      <CheckBox fx:id="checkpeso" layoutX="40.0" layoutY="241.0" mnemonicParsing="false" text="Peso" />
+      <CheckBox fx:id="checktiempo" layoutX="42.0" layoutY="271.0" mnemonicParsing="false" text="Tiempo" />
+      <CheckBox fx:id="checkalmacen" layoutX="41.0" layoutY="298.0" mnemonicParsing="false" text="Almacenamiento" />
+      <Button fx:id="volver" layoutX="83.0" layoutY="345.0" mnemonicParsing="false" onAction="#volverAction" prefHeight="42.0" prefWidth="90.0" text="Volver" />
+      <Button fx:id="aceptar" layoutX="216.0" layoutY="345.0" mnemonicParsing="false" onAction="#aceptarAction" prefHeight="42.0" prefWidth="90.0" text="Aceptar" />
+   </children>
+</Pane>

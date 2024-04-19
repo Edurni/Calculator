@@ -1,0 +1,76 @@
+.root {
+    -fx-background-color: #000000;
+}
+
+#label {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+#labelmemoria {
+    -fx-text-fill: white;
+}
+.button {
+    -fx-shape: "M0,50 h100 v100 h-100 z";
+    -fx-border-color: #444444;
+    -fx-border-width: 1px;
+}
+
+#btn_multiplicar, #btn_dividir, #btn_restar, #btn_mas {
+    -fx-background-color: #00b4d8;
+    -fx-text-fill: white;
+}
+
+#btn_igual {
+ -fx-background-color: #A569BD;
+ -fx-text-fill: white;
+}
+#btn_log,
+#btn_sin,
+#btn_tan,
+#btn_exp,
+#btn_cos {
+    -fx-background-color:  #42687E;
+    -fx-text-fill: white;
+}
+
+#btn_ac {
+    -fx-background-color: #ff3333;
+    -fx-text-fill: white;
+}
+
+#btn_masmenos, #btn_mod {
+    -fx-background-color: #6666ff;
+    -fx-text-fill: white;
+}
+
+#btn_punto {
+    -fx-background-color: #ff9900;
+    -fx-text-fill: white;
+}
+
+#btn_MC, #btn_MR, #btn_MPlus,#btn_MS {
+    -fx-background-color: #4CAF50;
+}
+#btn_log:hover,
+#btn_sin:hover,
+#btn_tan:hover,
+#btn_exp:hover,
+#btn_cos:hover,
+#btn_multiplicar:hover,
+#btn_dividir:hover,
+#btn_restar:hover,
+#btn_mas:hover,
+#btn_igual:hover,
+#btn_ac:hover,
+#btn_masmenos:hover,
+#btn_mod:hover,
+#btn_punto:hover,
+#btn_MC:hover,
+#btn_MR:hover,
+#btn_MPlus:hover,
+#btn_MS:hover {
+    -fx-background-color: #A3E4D7;
+}
+.button:hover {
+            -fx-background-color: #A3E4D7;
+        }

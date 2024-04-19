@@ -1,0 +1,12 @@
+title: DI2024
+lang: es
+description: Proyecto final calculadora
+remote_theme: rundocs/jekyll-rtd-theme
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme

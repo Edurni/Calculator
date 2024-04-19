@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="cientifica" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="525.0" prefWidth="708.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="di.calculadorafx.HelloControllerC">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="676.0" VBox.vgrow="ALWAYS">
+         <children>
+            <MenuBar fx:id="menu" prefHeight="25.0" prefWidth="668.0">
+               <menus>
+                  <Menu fx:id="menuid" onAction="#menu" text="Modo">
+                     <items>
+                        <MenuItem fx:id="sencillaid" onAction="#CalculadoraSencillaS" text="Normal" />
+                        <MenuItem fx:id="cientificaid" onAction="#CalculadoraCientifica" text="Científica" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="edicionCid" onAction="#edicionCaction" text="Edicion">
+
+                  </Menu>
+                  <Menu fx:id="AyudaCid" onAction="#AyudaCaction" text="Ayuda">
+
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="101.0" prefWidth="673.0">
+               <children>
+                  <Label id="label" fx:id="label" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="303.0" style="-fx-background-color: #000000;" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="78.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imagenicon" disable="true" fitHeight="137.0" fitWidth="52.0" layoutX="607.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Label fx:id="labelmemoria" layoutX="410.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="197.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <GridPane cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="668.0" VBox.vgrow="SOMETIMES">
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="20" />
+               </rowConstraints>
+               <children>
+                  <Button id="btn_cinco" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickcinco" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_cuatro" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickcuatro" text="4" textAlignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_multiplicar" fx:id="btn_multiplicar" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickmultiplicar" text="x" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_dividir" fx:id="btn_dividir" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="59.0" mnemonicParsing="false" onAction="#clickdividir" prefHeight="59.0" prefWidth="177.0" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="W_RESIZE" />
+                     </cursor>
+                  </Button>
+                  <Button id="btn_nueve" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clicknueve" prefHeight="71.0" prefWidth="167.0" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_ocho" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="57.0" mnemonicParsing="false" onAction="#clickocho" prefHeight="57.0" prefWidth="167.0" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_siete" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" mnemonicParsing="false" onAction="#clicksiete" prefHeight="60.0" prefWidth="167.0" text="7" textAlignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_mod" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickmod" prefHeight="95.0" prefWidth="131.0" text="\%" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_masmenos" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickmasmenos" prefHeight="89.0" prefWidth="131.0" text="+/-" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_tres" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="59.0" mnemonicParsing="false" onAction="#clicktres" prefHeight="59.0" prefWidth="167.0" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_restar" fx:id="btn_restar" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="57.0" mnemonicParsing="false" onAction="#clickmenos" prefHeight="63.0" prefWidth="167.0" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_seis" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="57.0" mnemonicParsing="false" onAction="#clickseis" prefHeight="72.0" prefWidth="167.0" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_dos" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="59.0" mnemonicParsing="false" onAction="#clickdos" prefHeight="59.0" prefWidth="167.0" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_uno" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="58.0" mnemonicParsing="false" onAction="#clickuno" prefHeight="58.0" prefWidth="167.0" text="1" textAlignment="CENTER" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_ac" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickac" text="AC" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_mas" fx:id="btn_mas" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#clicksumar" prefHeight="60.0" prefWidth="167.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_cero" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="58.0" mnemonicParsing="false" onAction="#clickcero" prefHeight="58.0" prefWidth="334.0" text="0" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button id="btn_punto" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="58.0" mnemonicParsing="false" onAction="#clickpunto" prefHeight="58.0" prefWidth="167.0" text="." textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_igual" fx:id="btn_igual" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="59.0" mnemonicParsing="false" onAction="#clickigual" prefHeight="59.0" prefWidth="167.0" text="=" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_MC" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#borrarMemoria" prefHeight="69.0" prefWidth="146.0" text="MR" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_MR" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#MostrarValorMemoria" prefHeight="69.0" prefWidth="146.0" text="MC" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_MS" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarenMemoria" prefHeight="69.0" prefWidth="146.0" text="MS" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_log" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logaritmo" prefHeight="69.0" prefWidth="146.0" text="log" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_sin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#seno" prefHeight="69.0" prefWidth="146.0" text="sin" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_tan" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#tangente" prefHeight="69.0" prefWidth="146.0" text="tan" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_exp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exponencial" prefHeight="69.0" prefWidth="146.0" text="exp" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_cos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#coseno" prefHeight="69.0" prefWidth="146.0" text="cos" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="1.0" top="1.0" />
+               </opaqueInsets>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

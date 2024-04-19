@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="cientifica" alignment="CENTER" prefHeight="539.0" prefWidth="524.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="di.calculadorafx.HelloController">
+   <children>
+      <VBox fx:id="vb" prefHeight="498.0" prefWidth="524.0">
+         <children>
+            <MenuBar fx:id="menuS">
+               <menus>
+                  <Menu fx:id="menuidS" onAction="#menuS" text="Modo">
+                     <items>
+                        <MenuItem fx:id="sencillaidS" onAction="#CalculadoraSencillaS" text="Calc. Conversiones" />
+                        <MenuItem fx:id="cientificaidS" onAction="#CalculadoraCientificaS" text="Científica" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Edicionid" onAction="#Edicionaction" text="Edicion">
+                     <items>
+                        <MenuItem fx:id="fijarvalorid" onAction="#fijarvalorid" text="Fijar valor" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Ayudaid" onAction="#AyudaAction" text="Ayuda" />
+               </menus>
+            </MenuBar>
+            <Pane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="524.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="imagenicon" disable="true" fitHeight="137.0" fitWidth="52.0" layoutX="472.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ListView fx:id="historialListView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="474.0" style="-fx-background-color: #000000;" />
+                  <Label fx:id="labelmemoria" layoutX="275.0" layoutY="4.0" prefHeight="25.0" prefWidth="197.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label id="label" fx:id="label" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="475.0" style="-fx-background-color: #000000;" text="0" textFill="WHITE">
+               <font>
+                  <Font size="86.0" />
+               </font>
+            </Label>
+            <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="330.0" prefWidth="471.0" VBox.vgrow="ALWAYS">
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+                  <ColumnConstraints percentWidth="25" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+                  <RowConstraints percentHeight="20" />
+               </rowConstraints>
+               <children>
+                  <Button id="btn_cinco" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickcinco" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_cuatro" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickcuatro" text="4" textAlignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_nueve" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clicknueve" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_ocho" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickocho" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_siete" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clicksiete" text="7" textAlignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_tres" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clicktres" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_seis" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickseis" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_dos" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickdos" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_uno" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickuno" text="1" textAlignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_ac" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickac" text="AC" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_cero" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickcero" text="0" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button id="btn_punto" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickpunto" text="." textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_igual" fx:id="btn_igual" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="65.0" mnemonicParsing="false" onAction="#clickigual" text="=" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Button>
+                  <Pane fx:id="paneCombos" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="525.0" GridPane.rowIndex="1">
+                     <children>
+                        <ComboBox fx:id="combobox1" layoutX="14.0" layoutY="20.0" onAction="#combobox1action" prefWidth="150.0" />
+                        <ComboBox fx:id="combobox2" layoutX="188.0" layoutY="20.0" onAction="#combobox2action" prefWidth="150.0" />
+                        <ComboBox fx:id="combobox3" layoutX="350.0" layoutY="20.0" onAction="#combobox3action" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="1.0" top="1.0" />
+               </opaqueInsets>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>
